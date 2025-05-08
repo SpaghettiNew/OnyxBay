@@ -32,6 +32,9 @@ avoid code duplication. This includes items that may sometimes act as a standard
 /obj/item/proc/resolve_attackby(atom/A, mob/user, click_params)
 	if(!(item_flags & ITEM_FLAG_NO_PRINT))
 		add_fingerprint(user)
+	var/cancel = SEND_SIGNAL(A, SIGNAL_ATTACKBY, src, user, A, click_params)
+	if(cancel)
+		return
 	return A.attackby(src, user, click_params)
 
 // Proximity_flag is 1 if this afterattack was called on something adjacent, in your square, or on your person.

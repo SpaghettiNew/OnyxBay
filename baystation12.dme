@@ -3243,5 +3243,6 @@
 #include "maps\~mapsystem\map_preferences.dm"
 #include "maps\~mapsystem\maps.dm"
 #include "maps\~mapsystem\maps_jobs.dm"
+#include "modular_stir\pila.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE
